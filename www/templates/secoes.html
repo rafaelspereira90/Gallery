@@ -1,0 +1,21 @@
+<ion-view view-title="Seções">
+  <ion-content>
+
+    <ion-list show-delete="removeStatus">
+        <ion-item ng-repeat="item in lista track by $index">
+          <div class="row">
+            <div class="col col-90">
+              {{item.nome}}
+              <ion-delete-button class="ion-minus-circled" ng-click="onItemRemove(item)"></ion-delete-button>
+              <ion-option-button class="button-positive" ng-click="onItemEdit(item)">Editar</ion-option-button>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="col col-100">
+      <button class="button icon-right ion-trash-b button-dark button-clear" ng-click="onClickRemove()"></button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

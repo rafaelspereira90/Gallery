@@ -1,0 +1,49 @@
+/* Empty. Add your own CSS if you like */
+
+#button-secao
+{
+	margin-left: 20%;
+	margin-top: 30%;
+}
+#button-camera
+{
+	margin-left: 20%;
+	margin-top: 30%;
+
+}
+
+#button-notification
+{
+
+	margin-left: 60%;
+	margin-top: -15%;
+	
+}
+
+#card-anuncio
+{
+
+	margin-top: 70%;
+
+}
+
+i.ion-android-notifications-none
+{
+	font-size: 90px;
+	padding-left: 10px;
+}
+
+i.ion-camera
+{
+	font-size: 90px;
+
+}
+
+i.ion-ios-compose-outline
+{
+	font-size: 90px;
+}
+.item-nao-lido
+{
+	background: red;
+}

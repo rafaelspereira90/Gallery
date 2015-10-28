@@ -1,0 +1,56 @@
+<ion-view view-title="Home">
+  <ion-content>
+    <ion-list show-delete="removeStatus">
+      <ion-item ng-repeat="item in lista">
+        <a class="item item-avatar-left">
+          {{item.nome}}
+          <ion-delete-button class="ion-minus-circled" ng-click="onItemRemove(item)"></ion-delete-button>
+          <ion-option-button class="button-positive" ng-click="onItemEdit(item)">Editar</ion-option-button>
+        </a>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="list">
+    <a class="item item-thumbnail-left" href="#">
+      <img ng-src="{{pictureURL}}">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+    </a>
+  </div>
+
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="avatar.jpg">
+    <h2>Pretty Hate Machine</h2>
+    <p>Nine Inch Nails</p>
+  </div>
+
+  <div class="item item-image">
+      <img ng-src="{{pictureURL}}">
+  </div>
+
+  <a class="item item-icon-left assertive" href="#">
+    <i class="icon ion-music-note"></i>
+    Start listening
+  </a>
+
+</div>
+
+
+  </ion-content>
+  <ion-footer-bar class="bar-stable">
+      <div class="col col-33 col-offset-10">
+        <button class="button button-dark button-clear icon ion-compose" ng-click="onItemAdd()"></button>
+      </div>
+
+      <div class="col col-33 ">
+        <button class="button button-dark button-clear icon ion-camera" ng-click="tirarFoto()"></button>
+      </div>
+
+      <div class="col col-33 ">
+        <button class="button icon-right ion-trash-b button-dark button-clear" ng-click="onClickRemove()"></button>
+      </div>
+  </ion-footer-bar>
+</ion-view>
