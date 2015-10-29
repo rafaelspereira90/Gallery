@@ -18,5 +18,20 @@
         </label>
       </div>
     </form>
+    <form>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Nomee:</span>
+          <input type="text" data-ng-model="nome">
+        </label>
+        <label class="item">
+          <button class="button button-block button-energized button" type="submit" ng-click="adicionarDisciplina(nome)">Adicionar</button>
+          <button class="button button-block button-energized button" type="submit" ng-click="carregarDisciplinas()">Carregar</button>
+          <input type="text readonly" value="{{resultado}}">
+        </label>
+      </div>
+      <div> 
+      </div>
+    </form>
   </ion-content>
 </ion-modal-view>
