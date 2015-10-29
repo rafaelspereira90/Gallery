@@ -87,7 +87,31 @@ app.controller('HomeCtrl', function($scope,$ionicPopup, $timeout,$ionicListDeleg
       tasks.save();
     };
 
+    $scope.resultado = "";
+  $scope.adicionarDisciplina = function (valor){
+    var query = "INSERT INTO disciplinas(nome) values(teste)";
+    $cordovaSQLite.execute(db,query,["teste"]).then(function(result){
+      //$scope.resultado.push({mensagem: "Insert OK!"});
+      $scope.resultado = "Insert OK!";
+    alert(resultado);
+    },function(error){
+      $scope.resultado = "Insert Failed!";
+    });
+  }
 
+  $scope.carregarDisciplinas = function (){
+    var query = "SELECT nome FROM disciplinas";
+    $cordovaSQLite.execute(db,query,["teste"]).then(function(result){
+      if (result.rows.length>0) {
+        $scope.resultado = result.rows.item(0).nome+"encontrada.";  
+      }else{
+        $scope.resultado ="Nada encontrado.";
+      }
+    alert(resultado);  
+    },function(error){
+      console.log("erro!");
+    });
+  }
 
 
 });
